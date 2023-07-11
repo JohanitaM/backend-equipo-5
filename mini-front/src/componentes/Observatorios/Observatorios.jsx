@@ -1,10 +1,12 @@
 import React from 'react';
-import styles from "./Observatorios.module.scss"
-import { Descripcionseñal } from '../Descripcionseñal/Descripcionseñal';
+import styles from "./Observatorios.module.scss";
+import Descripcionseñal from '../Descripcionseñal/Descripcionseñal';
+import Paises from '../Paises/Paises';
+
 
 export const Observatorios = () => {
 
-  const {form, group1, group1__obser, group1__input} = styles;
+  const {form, group1, group1__obser, group1__input, area} = styles;
 
   return (
     <form className={form}>
@@ -64,18 +66,11 @@ export const Observatorios = () => {
       </div><br></br>
 
       <div>
-        <label htmlFor="pais-donde-ocurre-la-señal">Pais donde ocurre la señal: *</label><br></br>
-        <select id="pais-donde-ocurre-la-señal">
-          <option>Selecione</option>
-          <option>Global</option>
-          <option></option>
-          <option></option>
-        </select>
+      <Paises/>
       </div><br></br>
 
       <div>
-        <label htmlFor="decripcion-de-la-señal">Descripcion de la señal: *</label><br></br>
-        <textarea name="textarea"></textarea>
+        <Descripcionseñal/>
       </div><hr></hr>
     </div>
     
@@ -83,7 +78,7 @@ export const Observatorios = () => {
     <label htmlFor="temas">Temas:</label><br></br>
       <select id="temas">
         <option>Selecione</option>
-        <option>Nuevas formas de trabajar</option>
+        <option>Nuevas formas de trabajo</option>
         <option>Las personas en el centro</option>
         <option>Cambios en el aprendizaje</option>
         <option>Avances tecnologicos en el trabajo</option>

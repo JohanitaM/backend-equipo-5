@@ -1,0 +1,18 @@
+@import "../../styles/base/variables";
+
+.area{
+    display: flex;
+    border: 2px solid black;
+    resize: none;
+    width: 450px;
+    height: 120px;
+    
+
+    &__text{
+        display: inline-block;
+        font-size: $font-size-st;
+        padding: 0px;
+        margin: 0;
+       //float: right;
+    }
+}
