@@ -1,16 +1,22 @@
 import React from 'react';
 import styles from "./Observatorios.module.scss"
+import { Descripcionseñal } from '../Descripcionseñal/Descripcionseñal';
 
 export const Observatorios = () => {
+
+  const {form, group1, group1__obser, group1__input} = styles;
+
   return (
-    <form>
+    <form className={form}>
+
+    <div className={group1}>
       <div>
         <label htmlFor="titulo">Titulo: *</label><br></br>
         <input id="titulo" type="text"></input>
-    </div><br></br>
+      </div><br></br>
 
-      <div>
-       <label htmlFor="titulo">Observatorios: *</label><br></br>
+      <div className={group1__obser}>
+       <label htmlFor="titulo" className={group1__input}>Observatorios: *</label><br></br>
         <select id="titulo">
           <option>Seleccione</option>
           <option>Talento Humano</option>
@@ -55,33 +61,38 @@ export const Observatorios = () => {
           <option>Educación</option>
           <option>Ciberseguridad</option>
         </select>
-    </div><br></br>
+      </div><br></br>
 
-    <div>
-      <label htmlFor="pais-donde-ocurre-la-señal">Pais donde ocurre la señal: *</label>
-      <select id="pais-donde-ocurre-la-señal">
-        <option>Selecione</option>
-        <option>Global</option>
-        <option></option>
-        <option></option>
-      </select>
-    </div><br></br>
+      <div>
+        <label htmlFor="pais-donde-ocurre-la-señal">Pais donde ocurre la señal: *</label><br></br>
+        <select id="pais-donde-ocurre-la-señal">
+          <option>Selecione</option>
+          <option>Global</option>
+          <option></option>
+          <option></option>
+        </select>
+      </div><br></br>
 
+      <div>
+        <label htmlFor="decripcion-de-la-señal">Descripcion de la señal: *</label><br></br>
+        <textarea name="textarea"></textarea>
+      </div><hr></hr>
+    </div>
+    
     <div>
-      <label htmlFor="decripcion-de-la-señal">Descripcion de la señal: *</label><br></br>
-      <textarea name="textarea"></textarea>
-    </div><hr></hr>
-
-    <div>
-    <label htmlFor="temas">Temas: *</label><br></br>
+    <label htmlFor="temas">Temas:</label><br></br>
       <select id="temas">
         <option>Selecione</option>
-        <option></option>
-        <option></option>
-        <option></option>
-      </select>
+        <option>Nuevas formas de trabajar</option>
+        <option>Las personas en el centro</option>
+        <option>Cambios en el aprendizaje</option>
+        <option>Avances tecnologicos en el trabajo</option>
+        <option>El lugar de trabajo</option>
+        <option>Compensacion total</option>
+        <option>Gestion del desempeño</option>
+      </select><br></br>
 
-      <label htmlFor="tags">Tags: *</label><br></br>
+      <label htmlFor="tags">Tags:</label><br></br>
       <select id="tags">
         <option>Selecione</option>
         <option></option>
@@ -101,7 +112,7 @@ export const Observatorios = () => {
       <label htmlFor="adjuntar-img">Adjuntar imagen y/o documento:</label><br></br>
       <input type="file" />
     </div><br></br>
-    
+  
     <div>
       <button>CANCELAR</button>
       <button>CREAR SEÑAL</button>

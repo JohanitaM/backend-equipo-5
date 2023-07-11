@@ -1,1 +1,23 @@
 @import "../../../src/styles/base/variables";
+
+.form{
+font-family: $font-primary;
+display: flex;
+flex-direction: column;
+font-size: $font-size-sr;
+color:$primary-color;
+font-weight: 500;
+padding: 30px;
+
+    &__obser{
+        justify-content: center;
+    }
+
+    &__input{
+        
+    }
+}
+
+.group1 {
+    display: inline-block;
+}
