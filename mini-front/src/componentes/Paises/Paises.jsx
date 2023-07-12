@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from '../Paises/Paises.module.scss';
 
 const Paises = () => {
-  const {group1, group1__input} = styles;
+  const {group1__izquierdo1, group1, group1__input} = styles;
 
     const [countries, setCountries] = useState([]);
 
@@ -21,9 +21,9 @@ const Paises = () => {
     }, []);
   
   return (
-    <div>
+    <div className={group1__izquierdo1}>
         <label htmlFor="pais-donde-ocurre-la-señal" className={group1}>Pais donde ocurre la señal: *</label><br></br>
-       <select className={group1__input}>
+       <select className= {group1__input}>
        <option></option>
        <option>Global</option>
         {countries.map((country) => (

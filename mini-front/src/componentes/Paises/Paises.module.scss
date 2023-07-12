@@ -1,18 +1,16 @@
 @import "../../styles/base/variables";
 
 .group1 {
-    display:inline-flex;
-    flex-direction: row;
-    padding: 15px;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    //margin-left: 40px;
 
-    &__input{
-        width: 70%;
-        margin-left: 82px;
-        font-size: $font-size-sr;
-        padding: 5px;
-        text-align: center;
-        appearance: auto;
-    }
+        &__input{
+            width: 40%;
+            font-size: $font-size-sr;
+            appearance: auto;
+            border: 1px solid black;
+            border-radius:15px;
+        }
 }
