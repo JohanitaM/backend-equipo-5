@@ -75,10 +75,10 @@ export const Observatorios = () => {
         </div>
     </div><hr></hr>
 
-    <div>
+    <div className={group1}>
       <div>
-      <label htmlFor="temas">Temas:</label><br></br>
-        <select id="temas">
+      <label htmlFor="temas" className={group1}>Temas:</label><br></br>
+        <select id="temas" className= {group1__input}>
           <option>Selecione</option>
           <option>Nuevas formas de trabajo</option>
           <option>Las personas en el centro</option>
@@ -89,33 +89,39 @@ export const Observatorios = () => {
           <option>Gestion del desempeño</option>
         </select><br></br>
 
-        <label htmlFor="tags">Tags:</label><br></br>
-        <select id="tags">
+        <label htmlFor="tags" className={group1}>Tags:</label><br></br>
+        <select id="tags" className= {group1__input}>
           <option>Selecione</option>
           <option></option>
           <option></option>
           <option></option>
         </select>
       </div>
+      
+
         <div>
-        <label htmlFor="url">URL: *</label><br></br>
-          <input id="url" type="url"></input><br></br>
+        <label htmlFor="url" className={group1}>URL: *</label><br></br>
+          <input id="url" type="url" className= {group1__input}></input><br></br>
         </div>
-        <div>
-        <label htmlFor="fecha-senal">¿Cuando ocurrio la señal?: *</label><br></br>
-        <input id="fecha-señal" type="date"></input>
-      </div>
+
     </div><br></br>
+
+<div>
+        <div>
+        <label htmlFor="fecha-senal"  className={group1}>¿Cuando ocurrio la señal?: *</label><br></br>
+        <input id="fecha-señal" type="date"className= {group1__input}></input>
+      </div><br></br>
     
-    <div>
-      <label htmlFor="adjuntar-img">Adjuntar imagen y/o documento:</label><br></br>
+    
+    <div className={group1}>
+      <label htmlFor="adjuntar-img"> Adjuntar imagen y/o documento:  </label><br></br>
       <input type="file" />
     </div><br></br>
-  
-    <div>
-      <button>CANCELAR</button>
-      <button>CREAR SEÑAL</button>
     </div>
+    <div><br></br>
+      <button  >CANCELAR</button>
+      <button>CREAR SEÑAL</button>
+    </div><br></br><br></br>
     </form>
     
   )
