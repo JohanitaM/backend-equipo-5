@@ -1,27 +1,32 @@
 @import "../../../src/styles/base/variables";
+body{
+    background-color: rgb(248, 247, 247);
+}
 
 .form{
-font-family: $font-primary;
+font-family: $font-tertiary;
 display: flex;
-flex-direction: column;
-font-size: $font-size-sr;
+flex-direction:column;
+font-size: $font-size-s;
 color:$primary-color;
 font-weight: 500;
-padding: 30px;
-
-    &__obser{
-        justify-content: center;
-    }
-
-    &__input{
-        
-    }
+padding: 0px 100px 0px  100px;
+align-items: center;
 }
 
 .group1 {
-    display: inline-block;
-}
-.area{
-    border: 1px solid black;
-    resize: none;
+    display:inline-flex;
+    flex-direction: row;
+    padding: 20px;
+    align-items: center;
+    margin-left: 40px;
+
+    &__input{
+        margin-left: 82px;
+        width: 70%;
+        font-size: $font-size-sr;
+        padding: 5px;
+        text-align: center;
+        appearance: auto;
+    }
 }

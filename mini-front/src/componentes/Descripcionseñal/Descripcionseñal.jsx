@@ -11,7 +11,7 @@ const Descripcionseñal = () => {
     setText(event.target.value);
   };
 
-  const minCharacters = 0;
+  const minCharacters = 8;
   const maxCharacters = 1500;
 
   const isTextTooShort = text.length > minCharacters;

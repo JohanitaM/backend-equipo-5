@@ -1,1 +1,18 @@
 @import "../../styles/base/variables";
+
+.group1 {
+    display:inline-flex;
+    flex-direction: row;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+
+    &__input{
+        width: 70%;
+        margin-left: 82px;
+        font-size: $font-size-sr;
+        padding: 5px;
+        text-align: center;
+        appearance: auto;
+    }
+}

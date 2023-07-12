@@ -6,20 +6,20 @@ import Paises from '../Paises/Paises';
 
 export const Observatorios = () => {
 
-  const {form, group1, group1__obser, group1__input, area} = styles;
+  const {form, group1, group1__input} = styles;
 
   return (
     <form className={form}>
 
     <div className={group1}>
       <div>
-        <label htmlFor="titulo">Titulo: *</label><br></br>
-        <input id="titulo" type="text"></input>
+        <label htmlFor="titulo" className={group1}>Titulo: *</label><br></br>
+        <input id="titulo" type="text" className= {group1__input}></input>
       </div><br></br>
 
-      <div className={group1__obser}>
-       <label htmlFor="titulo" className={group1__input}>Observatorios: *</label><br></br>
-        <select id="titulo">
+      <div>
+       <label htmlFor="observaorio" className={group1}>Observatorios: *</label><br></br>
+        <select id="observatorio" className= {group1__input}>
           <option>Seleccione</option>
           <option>Talento Humano</option>
           <option>Comunicación y marca</option>
@@ -66,43 +66,47 @@ export const Observatorios = () => {
       </div><br></br>
 
       <div>
-      <Paises/>
+        <Paises/>
       </div><br></br>
-
+    </div>
+    <div>
       <div>
-        <Descripcionseñal/>
-      </div><hr></hr>
-    </div>
-    
-    <div>
-    <label htmlFor="temas">Temas:</label><br></br>
-      <select id="temas">
-        <option>Selecione</option>
-        <option>Nuevas formas de trabajo</option>
-        <option>Las personas en el centro</option>
-        <option>Cambios en el aprendizaje</option>
-        <option>Avances tecnologicos en el trabajo</option>
-        <option>El lugar de trabajo</option>
-        <option>Compensacion total</option>
-        <option>Gestion del desempeño</option>
-      </select><br></br>
-
-      <label htmlFor="tags">Tags:</label><br></br>
-      <select id="tags">
-        <option>Selecione</option>
-        <option></option>
-        <option></option>
-        <option></option>
-      </select>
-    </div>
+          <Descripcionseñal/>
+        </div>
+    </div><hr></hr>
 
     <div>
-      <label htmlFor="url">URL: *</label><br></br>
-      <input id="url" type="url"></input><br></br>
+      <div>
+      <label htmlFor="temas">Temas:</label><br></br>
+        <select id="temas">
+          <option>Selecione</option>
+          <option>Nuevas formas de trabajo</option>
+          <option>Las personas en el centro</option>
+          <option>Cambios en el aprendizaje</option>
+          <option>Avances tecnologicos en el trabajo</option>
+          <option>El lugar de trabajo</option>
+          <option>Compensacion total</option>
+          <option>Gestion del desempeño</option>
+        </select><br></br>
 
-      <label htmlFor="fecha-senal">¿Cuando ocurrio la señal?: *</label><br></br>
-      <input id="fecha-señal" type="date"></input>
+        <label htmlFor="tags">Tags:</label><br></br>
+        <select id="tags">
+          <option>Selecione</option>
+          <option></option>
+          <option></option>
+          <option></option>
+        </select>
+      </div>
+        <div>
+        <label htmlFor="url">URL: *</label><br></br>
+          <input id="url" type="url"></input><br></br>
+        </div>
+        <div>
+        <label htmlFor="fecha-senal">¿Cuando ocurrio la señal?: *</label><br></br>
+        <input id="fecha-señal" type="date"></input>
+      </div>
     </div><br></br>
+    
     <div>
       <label htmlFor="adjuntar-img">Adjuntar imagen y/o documento:</label><br></br>
       <input type="file" />

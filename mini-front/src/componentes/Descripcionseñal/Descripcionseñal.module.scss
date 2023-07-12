@@ -4,8 +4,9 @@
     display: flex;
     border: 2px solid black;
     resize: none;
-    width: 450px;
+    width: 850px;
     height: 120px;
+   justify-content: center;
     
 
     &__text{
@@ -13,6 +14,8 @@
         font-size: $font-size-st;
         padding: 0px;
         margin: 0;
-       //float: right;
+        float: right;
+        color: black;
+       //background-color: red;
     }
 }
