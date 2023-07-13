@@ -3,6 +3,7 @@ import React from 'react';
 import styles from "./Observatorios.module.scss";
 import Descripcionseñal from '../Descripcionseñal/Descripcionseñal';
 import Paises from '../Paises/Paises';
+import Crearseñal from '../CrearSeñal/Crearseñal';
 
 
 
@@ -16,6 +17,7 @@ export const Observatorios = () => {
 
   return (
     <form className={form}>
+      <Crearseñal/>
       <div className={group1}>
         <div className={group1__izquierdo1}>
           <span className={group1}>Titulo: *</span><br></br>
@@ -72,7 +74,7 @@ export const Observatorios = () => {
 
         <div>
           <Paises/>
-        </div><br/><hr/>
+        </div><br/>
 
         <div className={group1__derecho1}>
           <Descripcionseñal/>
@@ -124,13 +126,13 @@ export const Observatorios = () => {
     <div className={button}>
       <button className={button__primary}>
         CANCELAR
-      </button>   
-        
+      </button>
+
       <button className={button__secondary}>
         CREAR SEÑAL
-      </button>  
+      </button>
     </div><br/>
     </form>
-    
+
   )
 }

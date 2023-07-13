@@ -6,6 +6,7 @@ body {
 .form {
   font-family: $font-tertiary;
   display: flex;
+  width: auto;
   flex-direction: column;
   font-size: $font-size-sr;
   color: $primary-color;
@@ -79,7 +80,7 @@ body {
     }
 
     &__inputd{
-      width: 150%;
+      width: 140%;
       font-size: $font-size-sr;
       appearance: auto;
       border: 1px solid black;
@@ -136,22 +137,44 @@ body {
 }
 
 .button {
-  margin: 10px auto;
-  padding: 3px;
-  border-radius: 8px;
+  padding: 10px;
   font-size: $font-size-s;
   font-family: $font-primary;
-  font-weight: 600;
-  cursor:pointer;
-  transition: all 0.3s ease-in-out;
-  justify-content: space-between;
+  font-weight: 800;
+  overflow: auto;
   
     &__primary{
-      background-color:rgb(241, 241, 227);
+      border-radius: 10px;
+      width: 15%;
+      height: 30px;
+      background-color:rgb(211, 211, 184);
+      float: left; 
+      margin-right: 10px;
+      cursor:pointer;
+      font-weight: 700;
+
+      &:hover {
+        background-color: moccasin;
+        color:rgb(14, 26, 187);
+        border: 1px solid black;
+      }
     }
 
     &__secondary {
-      background-color:#375291;
+      width: 15%;
+      height: 30px;
+      border-radius: 10px;
+      background-color:#3253a1;
+      float: right;
+      margin-right: 10px;
+      cursor:pointer;
+      font-weight: 700;
+
+      &:hover {
+        background-color: moccasin;
+        color:rgb(14, 26, 187);
+        border: 1px solid black;
+      }
     }
        
 }

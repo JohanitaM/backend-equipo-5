@@ -7,7 +7,6 @@ import { Observatorios } from './componentes/Observatorios/Observatorios';
 function App() {
   return (
     <div>
-      <Crearseñal />
       <Observatorios />
     </div>
   );
