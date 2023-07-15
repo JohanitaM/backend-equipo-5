@@ -1,0 +1,100 @@
+@import "../../../src/styles/variables";
+
+.navbar {
+  background-color: #a3bfc0;
+  margin-top: 5px;
+  //padding: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font-primary;
+  height: 35px;
+
+  &__title {
+    color:$primary-color;
+    font-size: $font-size-lr;
+    font-weight: 800;
+  }
+
+  &__links {
+    font-size: $font-size-sr;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__li {
+    margin-left: 10px;
+    color: $dark-color;
+    padding-right: 60px;
+  }
+  
+  &__a {
+    color: $dark-color;
+    text-decoration: none;
+    font-weight: 400;
+
+    &:hover{
+      color:rgb(209, 84, 84);
+      text-decoration: underline black;
+    }
+  }
+  
+  &__button{
+    background-color: $primary-color;
+    font-size: $font-size-s;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: 600;
+
+    &:hover{
+      background-color:rgb(14, 140, 145);
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .navbar__links {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .navbar--title {
+    margin: 0 10px;
+  }
+
+  .navbar--li {
+    margin: 0 10px;
+  }
+
+  .navbar--a {
+    margin: 0 10px;
+  }
+
+  .navbar--button {
+    margin: 0 10px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    padding: 20px;
+  }
+
+  .navbar--title {
+    font-size: 30px;
+  }
+
+  .navbar--li {
+    margin-left: 20px;
+  }
+}

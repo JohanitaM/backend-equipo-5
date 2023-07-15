@@ -1,13 +1,10 @@
 
-
-import Crearseñal from './componentes/CrearSeñal/Crearseñal';
-import { Observatorios } from './componentes/Observatorios/Observatorios';
-
+import { Observatorios } from './componentes/observatorios/Observatorios.js';
 
 function App() {
   return (
     <div>
-      <Observatorios />
+    <Observatorios/>
     </div>
   );
 }
