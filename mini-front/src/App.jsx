@@ -4,7 +4,7 @@ import { Observatorios } from './componentes/observatorios/Observatorios.js';
 function App() {
   return (
     <div>
-    <Observatorios/>
+  /<Observatorios/>
     </div>
   );
 }
