@@ -12,6 +12,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.post('/scrape', async (req, res) => {
   const { url } = req.body;
 
+  //Configurar el navegador y la página web en puppeteer
+
   try {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
