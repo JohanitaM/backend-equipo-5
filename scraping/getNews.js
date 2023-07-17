@@ -1,6 +1,8 @@
 const express = require('express');
 const puppeteer = require('puppeteer');
 const path = require('path');
+// fs para guardar el archivo en el servidor en formato JSON
+const fs = require('fs');
 
 const app = express();
 const port = 3000;
@@ -13,7 +15,6 @@ app.post('/scrape', async (req, res) => {
   const { url } = req.body;
 
   //Configurar el navegador y la página web en puppeteer
-
   try {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
@@ -38,12 +39,30 @@ app.post('/scrape', async (req, res) => {
       return headers;
     });
 
+    // Obtener todos los enlaces
+    // const links = await page.evaluate(() => {
+    //   const links = [];
+    //   const linkElements = document.querySelectorAll('a');
+    //   linkElements.forEach((element) => {
+    //     links.push(element.href);
+    //   });
+    //   return links;
+    // });
+
+    // Guardar la información extraída en un archivo JSON
+    fs.writeFile('data.json', JSON.stringify({ paragraphs, headers}, null, 2), (err) => {
+      if (err) {
+        console.error('Ocurrió un error al guardar el archivo:', err);
+        return;
+      }
+      console.log('Archivo guardado');
+    });
     await browser.close();
 
     // Enviar la información extraída como respuesta
     res.json({
       paragraphs: paragraphs,
-      headers: headers
+      headers: headers,
     });
   } catch (error) {
     console.error('Ocurrió un error:', error);
