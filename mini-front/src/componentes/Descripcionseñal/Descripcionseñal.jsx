@@ -21,16 +21,6 @@ const Descripcionseñal = () => {
     <div className={group1__derecho1}>
       <p>Descripcion de la senal: *</p>
         <textarea id="myTextarea" value={text} onChange={handleChange} className={area}></textarea>
-        <p className={area__text}>
-          Caracteres: {text.length} / (max.{maxCharacters})
-        </p>
-        {isTextTooShort && (
-          <p className={area__text}><strong>El texto es demasiado corto. El minimo es de</strong> {minCharacters}</p>
-        )}
-        {isTextTooLong && (
-          <p className={area__text}><strong>El texto es demasiado largo. El limite es de</strong>{maxCharacters}</p>
-
-        )}
     </div>
   )
 }
