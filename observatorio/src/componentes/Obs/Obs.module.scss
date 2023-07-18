@@ -16,44 +16,89 @@
     font-weight: 800;
   }
 
-  &__links {
-    font-size: $font-size-sr;
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__li {
-    margin-left: 10px;
-    color: $dark-color;
-    padding-right: 60px;
-  }
-  
-  &__a {
-    color: $dark-color;
-    text-decoration: none;
-    font-weight: 400;
-
-    &:hover{
-      color:rgb(209, 84, 84);
-      text-decoration: underline black;
-    }
-  }
-  
+    
   &__button{
-    background-color: $primary-color;
+   background-color: rgb(79, 79, 228);
     font-size: $font-size-s;
     cursor: pointer;
-    border-radius: 15px;
-    font-weight: 600;
+    border-radius: 30px;
+    font-weight: 600; 
+    margin-right: 5%;
+    text-decoration: none;
+    padding: 10px;
 
     &:hover{
       background-color:rgb(14, 140, 145);
+      
     }
   }
 
 }
+
+.secciones {
+  display:flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 10px;
+  
+
+  &__left{
+    width: 40%;
+    color:$primary-color;
+    //font-weight: bold;
+
+    &__h2 {
+      font-size: $font-size-m;
+      font-weight: 700;
+    }
+
+    &__p{
+      color:rgb(2, 2, 54);
+      width: 40%;
+      height: 30px;
+      padding-left: 10px;
+      background-color: rgb(206, 199, 199);
+      padding-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    &__ideas {
+      padding-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  }
+
+  &__right{
+    width: 90%;
+    color:$primary-color;
+    font-weight: bold;
+    margin-right: 5%;
+  }
+}
+
+.seccionesCard{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px;
+  margin: 10px;
+  color: black;
+  width: 100%;
+  font-size: $font-size-st;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 600px) {

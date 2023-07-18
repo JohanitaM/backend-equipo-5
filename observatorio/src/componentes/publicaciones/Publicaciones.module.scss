@@ -1,0 +1,32 @@
+@import "../../../src/styles/variables";
+
+.card {
+    width: 250px;
+    background-color: rgb(206, 199, 199);
+    border-radius: 10px;
+    padding: 10px;
+
+    &__info{
+        display: flex;
+        gap:30px;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 60px;
+    }
+}
+
+.contenido{
+    display: flex;
+    padding-top: 20px;
+
+    &__p{
+        font-weight: 200;
+        font-size: $font-size-st;
+    }
+
+    &__img {
+        width: 100px;
+      
+    }
+}
+
