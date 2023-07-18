@@ -1,10 +1,10 @@
 
-import { Observatorios } from '../../mini-front/src/componentes/Observatorios/Observatorios';
+import Formulario from './componentes/Observatorios/Formulario';
 
 function App() {
   return (
     <div>
-      <Observatorios/>
+      <Formulario />
     </div>
   );
 }

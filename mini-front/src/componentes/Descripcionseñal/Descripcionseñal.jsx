@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const Descripcionseñal = () => {
 
-  const {group1__derecho1, area, area__text} = styles;
+  const {seccionform1__right, area, area__text} = styles;
   
   const [text, setText] = useState('');
   const handleChange = (event) => {
@@ -18,9 +18,9 @@ const Descripcionseñal = () => {
   const isTextTooLong = text.length > maxCharacters;
   
   return (
-    <div className={group1__derecho1}>
+    <div className={seccionform1__right}>
       <p>Descripcion de la senal: *</p>
-        <textarea id="myTextarea" value={text} onChange={handleChange} className={area}></textarea>
+      <textarea id="myTextarea" value={text} onChange={handleChange} className={area}></textarea>
     </div>
   )
 }

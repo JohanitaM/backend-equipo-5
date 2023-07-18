@@ -20,7 +20,7 @@ const Publicaciones = () => {
         <p className={contenido__p}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint veniam vel fugiat natus neque commodi temporibus harum maxime, totam quibusdam tempora modi</p>
         <img src={imagen} alt="imagen" className={contenido__img}/>
       </div>
-      
+
       <div className={card__info}>
         <span>2 horas</span>
         <span>Colombia</span>
