@@ -27,10 +27,11 @@ scrapeForm.addEventListener('submit', async (e) => {
       throw new Error('Scraping failed');
     }
 
-    const { paragraphs, headers } = await response.json();
+    const { paragraphs, headers, links } = await response.json();
 
     paragraphsContainer.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
     headersContainer.innerHTML = headers.map(h => `<h3>${h}</h3>`).join('');
+    linksContainer.innerHTML = links.map(l => `<a href="${l}">${l}</a>`).join('');
   } catch (error) {
     console.error(error);
     alert('Scraping failed');

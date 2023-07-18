@@ -25,7 +25,7 @@ export const Observatorios = () => {
         </div><br/>
 
         <div className={group1__izquierdo1}>
-          <span className={group1}>Observatorios: *</span><br></br>
+          <span className={group1}>Categorias: *</span><br></br>
           <select id="observatorio" className={group1__input}>
             <option>Seleccione</option>
             <option>Talento Humano</option>

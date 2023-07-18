@@ -2,20 +2,20 @@
 <!DOCTYPE html>
   <head>
     <title>Observatorio Suramericana</title>
-    <link rel="stylesheet" href="./styles.scss">
+    <link rel="stylesheet" href="./style.css">
   </head>
-  <body style="background-color: rgb(250, 249, 249); width: 100%;">
+  <body>
     <div style="align-items: center; display: flex; flex-direction: column">
-      <h1 style="color: rgb(27, 27, 209); font-size: 50px; align-items: center">Observatorio</h1>
+      <h1 class="title">Observatorio</h1>
       <form id="scrapeForm">
         <input type="text" id="urlInput" required placeholder="ingresa la url">
-        <button type="submit" style="cursor: pointer; font-weight: 600;">buscar</button>
+        <button type="submit" class="button">buscar</button>
       </form>
     </div>
     
 
-    <div id="resultsContainer" style="margin: 15px">
-      <h2 style="font-size: 34px;">Resultados:</h2>
+    <div id="resultsContainer" class="div2">
+      <h2 class="results">Resultados:</h2>
       <div id="paragraphsContainer"></div>
       <div id="headersContainer"></div>
     </div>

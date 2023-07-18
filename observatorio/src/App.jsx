@@ -1,12 +1,13 @@
 import './App.scss';
-import Navbar from './componentes/Navbar/Navbar';
+import Obs from './componentes/Obs/Obs';
+
 import SearchBar from './componentes/SearchBar/SearchBar';
 
 function App() {
 
   return (
     <div>
-      <Navbar/>
+      <Obs/>
       <SearchBar/>
     </div>
   );
