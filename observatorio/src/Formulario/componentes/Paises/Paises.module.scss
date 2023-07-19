@@ -1,0 +1,35 @@
+@import "../../../styles/variables";
+body {
+  background-color: rgb(248, 247, 247);
+}
+
+.seccionform1 {
+  display:flex;
+  justify-content: space-around;
+  //padding: 5px;
+  margin: 15px;
+ 
+    &__left{
+      width: 50%;
+      color:$primary-color;
+      font-weight: bold;
+      //font-weight: 600;
+      font-size: $font-size-s;
+      line-height: 280%;
+      }
+
+    &__input {
+      width: 70%;
+      padding-top: 5px;
+      border-radius: 5px;
+      font-size: $font-size-xs;
+    }
+
+    &__right{
+      width: 50%;
+      color:$primary-color;
+      font-weight: bold;
+      background-color: violet;
+      font-size: $font-size-s;
+    }
+}
