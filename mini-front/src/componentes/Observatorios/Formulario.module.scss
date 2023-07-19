@@ -1,25 +1,23 @@
 @import "../../../src/styles/base/variables";
-body {
-  background-color: rgb(248, 247, 247);
-}
 
 .seccionform1 {
   display:flex;
   justify-content: space-around;
-  //padding: 5px;
+  padding: 5px;
   margin: 15px;
+  line-height: 280%;
  
     &__left{
       width: 50%;
       color:$primary-color;
-      //font-weight: bold;
-      font-weight: 600;
+      font-weight: bold;
+      //font-weight: 600;
       font-size: $font-size-s;
       }
 
     &__input {
       width: 70%;
-      padding-top: 5px;
+      padding: 5px;
       border-radius: 5px;
       font-size: $font-size-xs;
     }
@@ -36,14 +34,15 @@ body {
 .seccionform2 {
   display:flex;
   justify-content: space-around;
-  padding: 10px;
+  padding: 5px;
   margin: 15px;
+  line-height: 280%;
  
     &__left{
       width: 50%;
       color:$primary-color;
-      //font-weight: bold;
-      font-weight: 600;
+      font-weight: bold;
+      //font-weight: 600;
       font-size: $font-size-s;
       }
 
@@ -65,15 +64,17 @@ body {
 .seccionform3 {
   display:flex;
   justify-content: space-around;
-  padding: 10px;
+  padding: 5px;
   margin: 15px;
+  line-height: 280%;
  
     &__left{
       width: 50%;
       color:$primary-color;
-      //font-weight: bold;
-      font-weight: 600;
+      font-weight: bold;
+      //font-weight: 600;
       font-size: $font-size-s;
+      line-height: 280%;
       }
 
     &__input {
@@ -94,13 +95,15 @@ body {
 
 .adjuntar {
   font-size: $font-size-xs;
-  padding: 20px;
+  padding: 30px;
   font-weight: 500;
+  color: blue;
 
   &__input {
     width: 30%;
     padding-top: 5px;
     font-size: $font-size-xs;
+    padding-left: 10px;
   }
 }
 
@@ -113,22 +116,23 @@ body {
   text-decoration: none;
   justify-content: space-around;
   
+  
     &__primario{
       color: black;
       border-radius: 10px;
-      width: 15%;
-      height: 30px;
+      width: auto;
+      height: auto;
       margin-right: 10px;
       font-weight: 700;
       background-color: rgb(150, 150, 243);
       text-decoration: none;
-      align-items: center;
+      margin-right: 50%;
     }
 
     &__secundario {
       color: black;
-      width: 15%;
-      height: 30px;
+      width: auto;
+      height: auto;
       border-radius: 10px;
       margin-right: 10px;
       cursor:pointer;
@@ -136,5 +140,6 @@ body {
       background-color: rgb(37, 37, 235);
       text-decoration: none;
       align-items: center;
+      margin-left: 2cap;
     }
   }

@@ -12,9 +12,10 @@ body {
     &__left{
       width: 50%;
       color:$primary-color;
-      //font-weight: bold;
-      font-weight: 600;
+      font-weight: bold;
+      //font-weight: 600;
       font-size: $font-size-s;
+      line-height: 280%;
       }
 
     &__input {

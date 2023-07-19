@@ -20,13 +20,13 @@ export const Formulario = () => {
     <Crearseñal/>
     <div className={seccionform1}>
       <section className={seccionform1__left}>
-          <span>
-            <p>Titulo: *</p><br></br>
+          <div>
+            <span>Titulo: </span><br></br>
             <input id="titulo" type="text" className={seccionform1__input}></input>
-          </span>
+          </div>
 
-          <span>
-            <p>Categorias: *</p><br />
+          <div>
+            <span>Categorias: </span><br />
             <select id="observatorio" className={seccionform1__input}>
               <option>Seleccione</option>
               <option>Talento Humano</option>
@@ -71,11 +71,11 @@ export const Formulario = () => {
               <option>Educación</option>
               <option>Ciberseguridad</option>
             </select>
-          </span>
+          </div>
 
-          <span>
+          <div>
             <Paises/>
-          </span>
+          </div>
       </section>
       <section className={seccionform1__right}>
           <span>
@@ -99,24 +99,24 @@ export const Formulario = () => {
         </select>
       </section><br/>
       <section className={seccionform2__right}>
-      <span>Tags:</span><br/>
-      <select id="tags" className={seccionform1__input}>
-          <option>Selecione</option>
-          <option></option>
-          <option></option>
-          <option></option>
-      </select>
+        <span>Tags:</span><br/>
+        <select id="tags" className={seccionform1__input}>
+            <option>Selecione</option>
+            <option></option>
+            <option></option>
+            <option></option>
+        </select>
       </section><br/>
     </div>
 
     <div className={seccionform3}>
       <section className={seccionform3__left}>
-          <span>URL: *</span>
+          <span>URL: </span><br />
           <input id="url" type="url" className={seccionform3__input}></input>
       </section>
 
       <section className={seccionform3__right}>
-        <span>¿Cuando ocurrio la señal?</span>
+        <span>¿Cuando ocurrio la señal? </span>
         <input id="fecha-señal" type="date"></input>
       </section>
     </div>
