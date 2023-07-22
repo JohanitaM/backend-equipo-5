@@ -4,9 +4,11 @@ import styles from "./Formulario.module.scss";
 import Descripcionseñal from '../Descripcionseñal/Descripcionseñal';
 import Paises from '../Paises/Paises';
 import Crearseñal from '../CrearSeñal/Crearseñal';
+import Categoria from '../Categoria/Categoria';
 
 
 export const Formulario = () => {
+  
 
   const {seccionform1, seccionform1__left, seccionform1__right, seccionform1__input} = styles;
   const {seccionform2, seccionform2__left, seccionform2__right, seccionform2__input} = styles;
@@ -19,56 +21,12 @@ export const Formulario = () => {
     <div className={seccionform1}>
       <section className={seccionform1__left}>
           <div>
-            <span>Titulo: </span><br></br>
+            <span>Titulo: *</span><br></br>
             <input id="titulo" type="text" className={seccionform1__input}></input>
           </div>
 
-          <div>
-            <span>Categorias: </span><br />
-            <select id="observatorio" className={seccionform1__input}>
-              <option>Seleccione</option>
-              <option>Talento Humano</option>
-              <option>Comunicación y marca</option>
-              <option>Canales de distribución</option>
-              <option>Autonomía</option>
-              <option>Consumidor</option>
-              <option>Competitividad</option>
-              <option>Tecnología</option>
-              <option>Sector energía</option>
-              <option>Sector retail</option>
-              <option>Gestión financiera</option>
-              <option>Trabajo autónomo</option>
-              <option>Movilidad</option>
-              <option>Responsabilidad social</option>
-              <option>Segmento alta renta</option>
-              <option>Habitat</option>
-              <option>Regulación</option>
-              <option>Sectores economicos</option>
-              <option>Megatendecias</option>
-              <option>Sector Logística</option>
-              <option>Salud</option>
-              <option>Urbanización</option>
-              <option>Escasez de recursos</option>
-              <option>Macroeconomía</option>
-              <option>Modelos de alianzas</option>
-              <option>Inmobiliario</option>
-              <option>Nutrición y alimentación</option>
-              <option>Conectividad</option>
-              <option>Coronavirus</option>
-              <option>Agrícola</option>
-              <option>Mercado LATAM</option>
-              <option>Sistemas de información geográfica</option>
-              <option>Límites Planetarios</option>
-              <option>Demandas cuidadanas</option>
-              <option>Analítica</option>
-              <option>Auditoría Interna</option>
-              <option>Transformación digital</option>
-              <option>Construcción</option>
-              <option>Clase media</option>
-              <option>Cambios demográficos</option>
-              <option>Educación</option>
-              <option>Ciberseguridad</option>
-            </select>
+          <div style={{ width: '71%', padding: '5px', border:'5px', heigh:'auto'}}>
+            <Categoria id="categoria"/><br />
           </div>
 
           <div>
@@ -125,13 +83,9 @@ export const Formulario = () => {
     </div>
 
     <div className={botones}>
-      <a href='http://localhost:3000/' className={botones__primario}>
-        CANCELAR
-      </a>
+      <a href='http://localhost:3000/' className={botones__primario}>CANCELAR</a>
 
-      <a  href='http://localhost:3001/' className={botones__secundario} target='blanck'>
-        CREAR SEÑAL
-      </a>
+      <a  href='http://localhost:3001/' className={botones__secundario} target='blanck'>CREAR SEÑAL</a>
     </div><br/>
 
 
