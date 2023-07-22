@@ -25,7 +25,7 @@ export const Formulario = () => {
             <input id="titulo" type="text" className={seccionform1__input}></input>
           </div>
 
-          <div style={{ width: '71%', padding: '5px', border:'5px', heigh:'auto'}}>
+          <div style={{ width: '71%', padding: '5px'}}>
             <Categoria id="categoria"/><br />
           </div>
 
