@@ -6,8 +6,6 @@ import Paises from '../Paises/Paises';
 import Crearseñal from '../CrearSeñal/Crearseñal';
 
 
-
-
 export const Formulario = () => {
 
   const {seccionform1, seccionform1__left, seccionform1__right, seccionform1__input} = styles;
@@ -127,11 +125,11 @@ export const Formulario = () => {
     </div>
 
     <div className={botones}>
-      <a href='http://localhost:3001/' className={botones__primario}>
+      <a href='http://localhost:3000/' className={botones__primario}>
         CANCELAR
       </a>
 
-      <a  href='http://localhost:3000/' className={botones__secundario} target='blanck'>
+      <a  href='http://localhost:3001/' className={botones__secundario} target='blanck'>
         CREAR SEÑAL
       </a>
     </div><br/>
