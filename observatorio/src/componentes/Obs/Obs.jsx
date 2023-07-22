@@ -12,7 +12,7 @@ const Obs = () => {
     <>
      <nav className={navbar}>
         <h1 className={navbar__title}>OBSERVATORIO</h1>
-        <a href='http://localhost:3001/' className={navbar__button} target='blanck'>CREAR</a>
+        <a href='/formulario' className={navbar__button} target='blanck'>CREAR</a>
     </nav>
     <SearchBar/>
     <div className={secciones}>
