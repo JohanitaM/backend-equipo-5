@@ -131,7 +131,7 @@ export const Formulario = () => {
         CANCELAR
       </a>
 
-      <a  href='http://localhost:3001/' className={botones__secundario}>
+      <a  href='http://localhost:3000/' className={botones__secundario} target='blanck'>
         CREAR SEÑAL
       </a>
     </div><br/>

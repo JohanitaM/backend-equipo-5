@@ -11,11 +11,11 @@ function App() {
     <div>
       <nav>
         <ul>
-          <li>
+          <li style={{ listStyle: 'none' }}>
             {Obs}
             <Link to="/"></Link>
           </li>
-          <li>
+          <li style={{ listStyle: 'none' }}>
             {Formulario}
             <Link to="/formulario"></Link>
           </li>
