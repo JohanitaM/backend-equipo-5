@@ -1,8 +1,14 @@
+const { MongoClient } = require('mongodb');
+const uri = 'mongodb://127.0.0.1:27017'; // Utiliza la dirección IPv4
 const express = require('express');
 const puppeteer = require('puppeteer');
 const path = require('path');
 // fs para guardar el archivo en el servidor en formato JSON
 const fs = require('fs');
+async function connectToMongoDB() {
+  const client = await MongoClient.connect(uri, { useUnifiedTopology: true });
+  return client.db('scraping'); // Reemplaza 'myDatabase' con el nombre de tu base de datos
+}
 
 const app = express();
 const port = 3001;
@@ -13,6 +19,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/scrape', async (req, res) => {
   const { url } = req.body;
+
+  const db = await connectToMongoDB();
+  const collection = db.collection('news'); 
+  try {
+    const result = await collection.insertMany({
+      title: title,
+      paragraphs: paragraphs,
+      date: date,
+    });
+
+    console.log('Datos guardados en MongoDB:', result.insertedId);
+  } catch (error) {
+    console.error('Ocurrió un error al guardar en MongoDB:', error);
+  }
 
   //Configurar el navegador y la página web en puppeteer
   try {

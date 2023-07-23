@@ -55,13 +55,6 @@ export const Formulario = () => {
         </select>
       </section><br/>
       <section className={seccionform2__right}>
-        <span>Tags:</span><br/>
-        <select id="tags" className={seccionform1__input}>
-            <option>Selecione</option>
-            <option></option>
-            <option></option>
-            <option></option>
-        </select>
       </section><br/>
     </div>
 
