@@ -3,6 +3,8 @@ const scrapeForm = document.getElementById('scrapeForm');
 const urlInput = document.getElementById('urlInput');
 const paragraphsContainer = document.getElementById('paragraphsContainer');
 const headersContainer = document.getElementById('headersContainer');
+const headerContainer = document.getElementById('headerContainer');
+const dateContainer = document.getElementById('dateContainer');
 
 scrapeForm.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -27,11 +29,12 @@ scrapeForm.addEventListener('submit', async (e) => {
       throw new Error('Scraping failed');
     }
 
-    const { paragraphs, headers, links } = await response.json();
+    const { paragraphs, title, date } = await response.json();
 
     paragraphsContainer.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
-    headersContainer.innerHTML = headers.map(h => `<h3>${h}</h3>`).join('');
-    linksContainer.innerHTML = links.map(l => `<a href="${l}">${l}</a>`).join('');
+    // headersContainer.innerHTML = headers.map(h => `<h3>${h}</h3>`).join('');
+    headerContainer.innerHTML = `<h1>${title}</h1>`;
+    dateContainer.innerHTML = `<p>${date}</p>`;
   } catch (error) {
     console.error(error);
     alert('Scraping failed');
