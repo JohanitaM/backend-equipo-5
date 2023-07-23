@@ -5,9 +5,11 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 // fs para guardar el archivo en el servidor en formato JSON
 const fs = require('fs');
+const { title } = require('process');
+
 async function connectToMongoDB() {
   const client = await MongoClient.connect(uri, { useUnifiedTopology: true });
-  return client.db('scraping'); // Reemplaza 'myDatabase' con el nombre de tu base de datos
+  return client.db('scraping'); // scraping: nombre de tu base de datos
 }
 
 const app = express();
@@ -21,7 +23,8 @@ app.post('/scrape', async (req, res) => {
   const { url } = req.body;
 
   const db = await connectToMongoDB();
-  const collection = db.collection('news'); 
+  const collection = db.collection('news'); //news: nombre de la coleccion
+
   try {
     const result = await collection.insertMany({
       title: title,
@@ -29,7 +32,7 @@ app.post('/scrape', async (req, res) => {
       date: date,
     });
 
-    console.log('Datos guardados en MongoDB:', result.insertedId);
+    console.log('Datos guardados en MongoDB:', result.insertedIds);
   } catch (error) {
     console.error('Ocurrió un error al guardar en MongoDB:', error);
   }
@@ -40,6 +43,13 @@ app.post('/scrape', async (req, res) => {
     const page = await browser.newPage();
     await page.goto(url);
 
+     // Obtener el encabezado de la página
+     const title = await page.evaluate(() => {
+      const title = document.querySelector("h1").innerText;
+      return title;
+    });
+
+    // Obtener todos los parrafos
     const paragraphs = await page.evaluate(() => {
       const paragraphs = [];
       const paragraphElements = document.querySelectorAll('p');
@@ -49,14 +59,11 @@ app.post('/scrape', async (req, res) => {
       return paragraphs;
     });
   
-    // Obtener todos los encabezados
-    const headers = await page.evaluate(() => {
-      const headers = [];
-      const headerElements = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-      headerElements.forEach((element) => {
-        headers.push(element.innerText);
-      });
-      return headers;
+  
+    // Obtener la fecha de publicación o página
+    const date = await page.evaluate(() => {
+      const date = document.querySelector("time").innerText;
+      return date;
     });
 
     // Obtener todos los enlaces
@@ -70,7 +77,7 @@ app.post('/scrape', async (req, res) => {
     // });
 
     // Guardar la información extraída en un archivo JSON
-    fs.writeFile('data.json', JSON.stringify({ paragraphs, headers}, null, 2), (err) => {
+    fs.writeFile('data.json', JSON.stringify({ title, paragraphs, date}, null, 2), (err) => {
       if (err) {
         console.error('Ocurrió un error al guardar el archivo:', err);
         return;
@@ -82,7 +89,8 @@ app.post('/scrape', async (req, res) => {
     // Enviar la información extraída como respuesta
     res.json({
       paragraphs: paragraphs,
-      headers: headers,
+      title: title,
+      date: date,
     });
   } catch (error) {
     console.error('Ocurrió un error:', error);
