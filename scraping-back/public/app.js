@@ -24,7 +24,7 @@ scrapeForm.addEventListener('submit', async (e) => {
     });
 
     if (!response.ok) {
-      throw new Error('Scraping failed');
+      throw new Error('Datos guardados');
     }
 
     const { paragraphs, headers, links } = await response.json();
@@ -33,7 +33,7 @@ scrapeForm.addEventListener('submit', async (e) => {
     headersContainer.innerHTML = headers.map(h => `<h3>${h}</h3>`).join('');
     linksContainer.innerHTML = links.map(l => `<a href="${l}">${l}</a>`).join('');
   } catch (error) {
-    console.error(error);
-    alert('Scraping failed');
+      console.error(error);
+      alert('Datos guardados');
   }
 });

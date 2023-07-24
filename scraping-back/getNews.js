@@ -5,7 +5,6 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 // fs para guardar el archivo en el servidor en formato JSON
 const fs = require('fs');
-const { title } = require('process');
 
 async function connectToMongoDB() {
   const client = await MongoClient.connect(uri, { useUnifiedTopology: true });
@@ -25,17 +24,7 @@ app.post('/scrape', async (req, res) => {
   const db = await connectToMongoDB();
   const collection = db.collection('news'); //news: nombre de la coleccion
 
-  try {
-    const result = await collection.insertMany({
-      title: title,
-      paragraphs: paragraphs,
-      date: date,
-    });
-
-    console.log('Datos guardados en MongoDB:', result.insertedIds);
-  } catch (error) {
-    console.error('Ocurrió un error al guardar en MongoDB:', error);
-  }
+  
 
   //Configurar el navegador y la página web en puppeteer
   try {
@@ -85,6 +74,11 @@ app.post('/scrape', async (req, res) => {
       console.log('Archivo guardado');
     });
     await browser.close();
+
+    // Guardar la información extraída en un arreglo de objetos
+    const news = [ { title, paragraphs, date } ];
+    await collection.insertMany(news);
+   
 
     // Enviar la información extraída como respuesta
     res.json({
