@@ -1,20 +1,19 @@
-const { MongoClient } = require('mongodb');
-const uri = 'mongodb://127.0.0.1:27017'; // Utiliza la dirección IPv4
+const connectToMongoDB = require('./database')
 const express = require('express');
+const cors = require('cors')
 const puppeteer = require('puppeteer');
 const path = require('path');
+const fetchNews = require('./fetchNews');
 // fs para guardar el archivo en el servidor en formato JSON
 const fs = require('fs');
-
-async function connectToMongoDB() {
-  const client = await MongoClient.connect(uri, { useUnifiedTopology: true });
-  return client.db('scraping'); // scraping: nombre de tu base de datos
-}
 
 const app = express();
 const port = 3001;
 
 app.use(express.json());
+app.use(cors());
+
+app.use("/news", fetchNews);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -95,3 +94,5 @@ app.post('/scrape', async (req, res) => {
 app.listen(port, () => {
   console.log(`Servidor web en ejecución en http://localhost:${port}`);
 });
+
+

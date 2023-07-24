@@ -13,7 +13,7 @@ scrapeForm.addEventListener('submit', async (e) => {
   const url = urlInput.value.trim();
 
   // Mostrar "Cargando"
-  loadingContainer.textContent = 'Cargando...';
+  loadingContainer.textContent = 'Extrayendo datos...';
 
   if (!url) {
     alert('Please enter a URL');
@@ -37,7 +37,7 @@ scrapeForm.addEventListener('submit', async (e) => {
     const { paragraphs, title, date } = await response.json();
 
     // Ocultar "Cargando" y mostrar resultados
-    loadingContainer.textContent = 'Resultados listos';
+    loadingContainer.textContent = 'Datos guardados';
     // Cuando los resultados estén listo crear 2 botones
     // 1. Para volver a ingresar una URL
     // 2. Para volver a la página principal
