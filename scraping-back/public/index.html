@@ -1,24 +1,24 @@
-<!--index-html-->
+<!-- index.html -->
 <!DOCTYPE html>
+<html>
   <head>
-    <title>Extraccion de señal</title>
-    <link rel="stylesheet" href="./styles.scss">
+    <title>Scraping Web Page</title>
+    <link rel="stylesheet" href="app.css">
   </head>
-  <body style="background-color: rgb(250, 249, 249); width: 100%;">
-    <div style="align-items: center; display: flex; flex-direction: column">
-      <h1 style="color: rgb(41, 41, 192); font-size: 40px; align-items: center">Ingresa el link de la noticia</h1>
+  <body>
+    <div class="container">
       <form id="scrapeForm">
-        <input type="text" id="urlInput" required placeholder="ingresa la url aqui">
-        <button type="submit" style="cursor: pointer; font-weight: 600">buscar</button>
-      </form>
-    </div>
-    
+      <h1 class="title">Scraping Web Page</h1>
+      <label for="urlInput">URL:</label>
+      <input type="text" id="urlInput" required placeholder="Ingrese la url de la noticia">
+      <button type="submit">Scrape</button>
+      <div id="loading"></div>
+      <div id="buttons"></div>
+    </form>
+      
 
-    <!--<div id="resultsContainer" style="margin: 15px">
-      <h2 style="font-size: 34px;">Resultados:</h2>
-      <div id="paragraphsContainer"></div>
-      <div id="headersContainer"></div>
-    </div>-->
     <script src="app.js"></script>
   </body>
 </html>
+
+    

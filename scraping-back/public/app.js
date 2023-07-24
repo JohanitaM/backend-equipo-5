@@ -1,18 +1,25 @@
 // app.js
 const scrapeForm = document.getElementById('scrapeForm');
 const urlInput = document.getElementById('urlInput');
+const headerContainer = document.getElementById('headerContainer');
 const paragraphsContainer = document.getElementById('paragraphsContainer');
-const headersContainer = document.getElementById('headersContainer');
+const dateContainer = document.getElementById('dateContainer');
+const loadingContainer = document.getElementById('loading');
+const buttonsContainer = document.getElementById('buttons');
 
 scrapeForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const url = urlInput.value.trim();
 
+  // Mostrar "Cargando"
+  loadingContainer.textContent = 'Cargando...';
+
   if (!url) {
     alert('Please enter a URL');
     return;
   }
+
 
   try {
     const response = await fetch('/scrape', {
@@ -24,16 +31,24 @@ scrapeForm.addEventListener('submit', async (e) => {
     });
 
     if (!response.ok) {
-      throw new Error('Datos guardados');
+      throw new Error('Scraping failed');
     }
 
-    const { paragraphs, headers, links } = await response.json();
+    const { paragraphs, title, date } = await response.json();
 
-    paragraphsContainer.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
-    headersContainer.innerHTML = headers.map(h => `<h3>${h}</h3>`).join('');
-    linksContainer.innerHTML = links.map(l => `<a href="${l}">${l}</a>`).join('');
+    // Ocultar "Cargando" y mostrar resultados
+    loadingContainer.textContent = 'Resultados listos';
+    // Cuando los resultados estén listo crear 2 botones
+    // 1. Para volver a ingresar una URL
+    // 2. Para volver a la página principal
+
+    buttonsContainer.innerHTML = `<button id="backButton" onclick="window.location.href='/'">Ingresar otra url</button>`;
+    buttonsContainer.innerHTML += `<a id="backButton" href='http://localhost:3000/'">Ir al observatorio</a>`;
+
+    // paragraphsContainer.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
+    // headerContainer.innerHTML = `<h1>${title}</h1>`;
+    // dateContainer.innerHTML = `<p>${date}</p>`;
   } catch (error) {
-      console.error(error);
-      alert('Datos guardados');
+    console.log(error);
   }
 });
