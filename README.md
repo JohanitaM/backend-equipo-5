@@ -1,5 +1,6 @@
 Proyecto Backend EAFIT
 Colaboradores: 
+
 <a href="[https://github.com/johndoe](https://github.com/Mangelzz)">
   <img alt="Miguel Angel García 💙💙💙" width="100">
 </a>
