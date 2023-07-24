@@ -2,6 +2,7 @@ const { MongoClient } = require('mongodb');
 const uri = 'mongodb://127.0.0.1:27017'; // Utiliza la dirección IPv4
 const express = require('express');
 const puppeteer = require('puppeteer');
+const cors = require('cors');
 const path = require('path');
 // fs para guardar el archivo en el servidor en formato JSON
 const fs = require('fs');
@@ -15,6 +16,7 @@ const app = express();
 const port = 3001;
 
 app.use(express.json());
+app.use(cors());
 
 app.use(express.static(path.join(__dirname, 'public')));
 

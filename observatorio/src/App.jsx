@@ -12,11 +12,11 @@ function App() {
       <nav>
         <ul>
           <li style={{ listStyle: 'none' }}>
-            {Obs}
+            Obs
             <Link to="/"></Link>
           </li>
           <li style={{ listStyle: 'none' }}>
-            {Formulario}
+            Formulario
             <Link to="/formulario"></Link>
           </li>
         </ul>
@@ -33,4 +33,4 @@ function App() {
 }
 
 
-export default App;
+export default App;
