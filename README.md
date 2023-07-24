@@ -1,6 +1,5 @@
 Proyecto Backend EAFIT
 
-Colaboradores: 
 A partir de señales (observaciones) crear un seguimiento a los patrones que van resultando en el día a día (scraping). 
 
 1. paso, recepción de señales
@@ -12,6 +11,7 @@ Acá nos toca crear un mini front que permita ingresar los links al material.
 
 4. Almacenarlo en una BD NOSQL para luego crear una visualización que permita identificar patrones. 
 
+Colaboradores: 
 
 <a href="[https://github.com/johndoe](https://github.com/Mangelzz)">
   <img alt="Miguel Angel García 💙💙💙"/> 
