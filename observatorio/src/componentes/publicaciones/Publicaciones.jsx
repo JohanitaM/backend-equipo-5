@@ -33,7 +33,11 @@ const Publicaciones = ({noticia}) => {
       <h2>{noticia.title}</h2>
       <div className={contenido}>
         <p className={contenido__p} resumen="200">{noticia.paragraphs}</p>
+<<<<<<< HEAD
         <img src={imagen} alt="imagen" className={contenido__img}/>
+=======
+        
+>>>>>>> b00da1d7721d36a8d656d15fd136d2695871b803
       </div>
 
       <div className={card__info}>

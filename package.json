@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
@@ -6,4 +7,14 @@
     "puppeteer": "^20.9.0",
     "react-router-dom": "^6.14.2"
   }
+=======
+    "dependencies": {
+        "cores": "^0.8.5",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "mongodb": "^5.7.0",
+        "puppeteer": "^20.9.0",
+        "react-router-dom": "^6.14.2"
+    }
+>>>>>>> b00da1d7721d36a8d656d15fd136d2695871b803
 }
