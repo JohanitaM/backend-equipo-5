@@ -6,20 +6,16 @@
     <link rel="stylesheet" href="app.css">
   </head>
   <body>
-    <h1 class="title">Scraping Web Page</h1>
-    <form id="scrapeForm">
+    <div class="container">
+      <form id="scrapeForm">
+      <h1 class="title">Scraping Web Page</h1>
       <label for="urlInput">URL:</label>
-      <input type="text" id="urlInput" required>
+      <input type="text" id="urlInput" required placeholder="Ingrese la url de la noticia">
       <button type="submit">Scrape</button>
+      <div id="loading"></div>
+      <div id="buttons"></div>
     </form>
-
-    <div id="resultsContainer">
-      <h2>Results:</h2>
-      <h1 id="headerContainer"></h1>
-      <div id="paragraphsContainer"></div>
-      <div id="headersContainer"></div>
-      <div id="dateContainer"></div>
-    </div>
+      
 
     <script src="app.js"></script>
   </body>
