@@ -5,7 +5,7 @@ import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import imagen from '../../assets/img_noticia.jpeg'
 
 const Publicaciones = ({noticia}) => {
-  console.log(noticia);
+  //console.log(noticia);
 
   const [liked, setLiked] = useState(false);
 
@@ -15,12 +15,25 @@ const Publicaciones = ({noticia}) => {
 
   const {card, contenido, contenido__p, contenido__img, card__info} = styles;
 
+  const parrafos = document.querySelectorAll("p[resumen]");
+
+  parrafos.forEach(parrafo => {
+    const maxCharacters = parseInt(parrafo.getAttribute("resumen"));
+    let textoCompleto = parrafo.textContent.trim();
+
+    if (textoCompleto.length > maxCharacters) {
+      // Resumir el texto
+      const textoResumido = textoCompleto.slice(0, maxCharacters) + "...";
+      parrafo.textContent = textoResumido;
+    }
+  });
+
   return (
     <div className={card}>
       <h2>{noticia.title}</h2>
       <div className={contenido}>
-        <p className={contenido__p}>{noticia.paragraphs}</p>
-        <img src={imagen} alt="imagen" className={contenido__img}/>
+        <p className={contenido__p} resumen="200">{noticia.paragraphs}</p>
+        
       </div>
 
       <div className={card__info}>

@@ -6,6 +6,7 @@ import Publicaciones from '../publicaciones/Publicaciones';
 const Obs = () => {
 
   const [noticias, setNoticias] = useState([]);
+
   useEffect(() => {
     fetch('http://localhost:3001/news')
     .then(res => res.json())
