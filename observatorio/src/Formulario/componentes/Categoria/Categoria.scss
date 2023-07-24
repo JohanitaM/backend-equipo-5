@@ -1,0 +1,31 @@
+@import "../../../../../observatorio/src/styles/variables";
+
+.seccionform1 {
+  display:flex;
+  justify-content: space-around;
+  padding: 5px;
+  margin: 15px;
+  //line-height: 280%;
+ 
+    &__left{
+      width: 50%;
+      color:$primary-color;
+      font-weight: bold;
+      //font-weight: 600;
+      font-size: $font-size-s;
+      }
+
+    &__input {
+      width: 50%;
+      padding: 5px;
+      border-radius: 5px;
+      font-size: $font-size-xs;
+    }
+
+    &__right{
+      width: 100%;
+      color:$primary-color;
+      font-weight: bold;
+      font-size: $font-size-s;
+    }
+}
