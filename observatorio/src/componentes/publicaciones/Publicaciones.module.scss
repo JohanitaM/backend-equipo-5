@@ -5,10 +5,6 @@
     background-color: rgb(206, 199, 199);
     border-radius: 10px;
     padding: 10px;
-<<<<<<< HEAD
-    text-overflow: hidden;
-=======
->>>>>>> b00da1d7721d36a8d656d15fd136d2695871b803
 
     &__info{
         display: flex;
@@ -19,11 +15,6 @@
     }
 }
 
-<<<<<<< HEAD
-.contenido{
-    display: flex;
-    padding-top: 20px;
-=======
 h2 {
     font-size: 20px;
     font-weight: bold;
@@ -37,16 +28,12 @@ h2 {
     display: flex;
     padding-top: 20px;
     overflow: hidden;
->>>>>>> b00da1d7721d36a8d656d15fd136d2695871b803
 
     &__p{
         font-weight: 200;
         font-size: $font-size-st;
-<<<<<<< HEAD
-=======
         display: block;
         font-size: 16px;
->>>>>>> b00da1d7721d36a8d656d15fd136d2695871b803
     }
 
     &__img {
@@ -54,4 +41,3 @@ h2 {
       
     }
 }
-

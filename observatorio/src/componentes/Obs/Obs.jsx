@@ -6,10 +6,6 @@ import Publicaciones from '../publicaciones/Publicaciones';
 const Obs = () => {
 
   const [noticias, setNoticias] = useState([]);
-<<<<<<< HEAD
-=======
-
->>>>>>> b00da1d7721d36a8d656d15fd136d2695871b803
   useEffect(() => {
     fetch('http://localhost:3001/news')
     .then(res => res.json())

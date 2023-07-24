@@ -9,8 +9,7 @@ router.get('/', async function(req, res) {
     res.json(news);
 });
 
-<<<<<<< HEAD
+
+
 module.exports = router;
-=======
-module.exports = router;
->>>>>>> b00da1d7721d36a8d656d15fd136d2695871b803
+
